@@ -33,7 +33,7 @@ def save_orig():
     """Save original easy_install.get_script_args.
     This is necessary because pbr's setup_hook is sometimes called
     before ours."""
-    _main_module()._orig_get_script_args = easy_install.get_script_args
+    _main_module()._orig_get_script_args = lambda: []
 
 
 def setup_hook(config):
